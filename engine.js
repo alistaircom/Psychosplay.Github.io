@@ -3912,7 +3912,7 @@ var Engine = {
 			Engine.Player.Glass -= Engine.Player.CarFactArm*15;
 			Engine.Player.Glass -= Engine.Player.PlaneFact*20;
 			
-			Engine.Values.GlassPS = Engine.Player.GlassFurnace*5 - Engine.Player.GlassContract*10 - Engine.Player.LightbulbFact*10 - Engine.Player.LightbulbFactArm*30 - Engine.Player.CarFact*5 - Engine.Player.PlaneFact*20;
+			Engine.Values.GlassPS = Engine.Player.GlassFurnace*5 - Engine.Player.GlassContract*10 - Engine.Player.LightbulbFact*10 - Engine.Player.LightbulbFactArm*30 - Engine.Player.CarFact*5 - Engine.Player.CarFactArm*15 - Engine.Player.PlaneFact*20;
 						
 			if (Engine.Values.GlassPS < 0) {
 				Engine.Player.Glass += Engine.Player.GlassAntiContract*10;
