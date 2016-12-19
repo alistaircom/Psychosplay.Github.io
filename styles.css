@@ -1,0 +1,110 @@
+* { 
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: Calibri, Arial, Helvetica;
+}
+
+h1 {
+	padding: 8px;
+	font-size: 18px;
+}
+
+h2 {
+	padding: 0px;
+	font-size: 14px;
+}
+
+p {
+	padding: 10px;
+	font-size: 30px;
+	color: #FF0000;
+}
+#meditation {
+	font-size: 24px;
+	color: green;
+}
+#rolld6 {
+	margin-left: 8px;
+}
+
+/** add the same margin to the save button **/
+#save {
+	margin-left: 8px;
+}
+table#land {
+    width: 100%; 
+    border-spacing: 5px;
+    text-align: center;
+}
+table#land , table#land  th, table#land  td  {
+    border: 1px solid black;
+    padding: 5px;
+}
+/** add the same margin to the left of the status box
+    but also make the text purple to make it stand out
+	a little bit **/
+#status {
+	margin-left: 8px;
+	color: purple;
+}
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
