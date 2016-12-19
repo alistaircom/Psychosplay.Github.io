@@ -1,5 +1,5 @@
 /**********************************************************************
-Version 14: Iron Selling/Breaking/AntiContract
+Version 15: Iron Selling/Breaking/AntiContract
 			Coal Selling/Breaking/AntiContract
 			Refined Selling/AntiContract
 			Steel Selling/AntiContract
@@ -19,7 +19,8 @@ Version 14: Iron Selling/Breaking/AntiContract
 			
 		
 			Tabs
-			
+				Hidden Divs
+				
 			Licenses
 			Workshop
 			Buildings
@@ -1369,7 +1370,7 @@ var Engine = {
 	},
 	
 	
-	UpgradeAACFactFact: function() {
+	UpgradeAACFact: function() {
 	
 		if (Engine.Player.Arm >= 1) {
 			if (Engine.Player.ACFact >= 1) {
@@ -3166,7 +3167,7 @@ var Engine = {
 				Engine.Values.AirportStatus.innerHTML = "Airport Owned";
 				Engine.Values.AirportStatus2.innerHTML = "";
 			} else {
-				Engine.Values.AirportStatus.innerHTML = "Cost: 5 Empty Lots + $1,000,000";
+				Engine.Values.AirportStatus.innerHTML = "Cost: 5 Empty Lots + $1,000,000 K";
 				Engine.Values.AirportStatus2.innerHTML = "Build an Airport to build:";
 			}
 			
@@ -4559,6 +4560,143 @@ var Engine = {
 			
 			
 			
+			
+			//==============Hidden Resources
+			//==============
+		
+		
+		
+			if (Engine.Player.GoldCoin > 0) {
+				document.getElementById("GoldCoinResource").className = "swMain";
+			}
+			
+		
+		
+		
+			if (Engine.Player.Iron > 0) {
+				document.getElementById("IronResource").className = "swMain";
+			}
+		
+			if (Engine.Player.RefIron > 0) {
+				document.getElementById("RefIronResource").className = "swMain";
+			}
+		
+			if (Engine.Player.Motor > 0) {
+				document.getElementById("MotorResource").className = "swMain";
+			}
+		
+			if (Engine.Player.Car > 0) {
+				document.getElementById("CarResource").className = "swMain";
+			}
+		
+			if (Engine.Player.PlaneLimit > 0) {
+				document.getElementById("PlaneResource").className = "swMain";
+			}
+		
+		
+			if (Engine.Player.Coal > 0) {
+				document.getElementById("CoalResource").className = "swMain";
+			}
+		
+			if (Engine.Player.Steel > 0) {
+				document.getElementById("SteelResource").className = "swMain";
+			}
+		
+			if (Engine.Player.MechPart > 0) {
+				document.getElementById("MechPartResource").className = "swMain";
+			}
+		
+			if (Engine.Player.AC > 0) {
+				document.getElementById("ACResource").className = "swMain";
+			}
+			
+		
+			if (Engine.Player.Copper > 0) {
+				document.getElementById("CopperResource").className = "swMain";
+			}
+		
+			if (Engine.Player.RefCopper > 0) {
+				document.getElementById("RefCopperResource").className = "swMain";
+			}
+			
+			if (Engine.Player.Spool > 0) {
+				document.getElementById("SpoolResource").className = "swMain";
+			}
+		
+			if (Engine.Player.Electronic > 0) {
+				document.getElementById("ElectronicResource").className = "swMain";
+			}
+
+			
+		
+			if (Engine.Player.Oil > 0) {
+				document.getElementById("OilResource").className = "swMain";
+			}
+		
+			if (Engine.Player.Gas > 0) {
+				document.getElementById("GasResource").className = "swMain";
+			}
+			
+			if (Engine.Player.Plastic > 0) {
+				document.getElementById("PlasticResource").className = "swMain";
+			}
+			
+		
+			if (Engine.Player.Sand > 0) {
+				document.getElementById("SandResource").className = "swMain";
+			}
+			
+			if (Engine.Player.Glass > 0) {
+				document.getElementById("GlassResource").className = "swMain";
+			}
+			
+			if (Engine.Player.Lightbulb > 0) {
+				document.getElementById("LightbulbResource").className = "swMain";
+			}
+
+			
+			
+			
+		
+			if (Engine.Player.GenCoal > 0) {
+				document.getElementById("CoalTab2").className = "swMain";
+			}
+		
+			if (Engine.Player.GenCopper > 0) {
+				document.getElementById("CopperTab2").className = "swMain";
+			}
+			
+			if (Engine.Player.GenOil > 0) {
+				document.getElementById("OilTab2").className = "swMain";
+			}
+		
+			if (Engine.Player.GenGlass > 0) {
+				document.getElementById("GlassTab2").className = "swMain";
+			}
+			
+			if (Engine.Player.Workshop > 0) {
+				document.getElementById("WorkshopTab2").className = "swMain";
+			}
+			
+			if (Engine.Player.GenPower > 0) {
+				document.getElementById("PowerTab2").className = "swMain";
+			}
+		
+			if (Engine.Player.Car > 0) {
+				document.getElementById("DealershipTab2").className = "swMain";
+			}
+			
+			if (Engine.Player.PlaneFact > 0) {
+				document.getElementById("AirportTab2").className = "swMain";
+			}
+			
+			if (Engine.Player.GoldCoin > 0) {
+				document.getElementById("GildedTab2").className = "swMain";
+			}
+			
+			
+			
+			
 			if (Engine.TwoSecondCounter > 1) {
 				Engine.TwoSecondCounter = 0
 			}
@@ -5687,6 +5825,16 @@ var Engine = {
 		Engine.Display.GildedOilWellCost = document.getElementById("GildedOilWellCost");
 		
 		Engine.Values.GildedLicenseStatus = document.getElementById("GildedLicenseStatus");
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
 		
 		
 		

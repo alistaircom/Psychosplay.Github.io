@@ -52,6 +52,16 @@ table#Iron , table#Iron  th  {
     width: 50%; 
     padding: 5px;
  }
+ 
+ .swMain {
+	visibility: visible
+ }
+ 
+ .swHide {
+	visibility: hidden
+ }
+ 
+ 
 /** add the same margin to the left of the status box
     but also make the text purple to make it stand out
 	a little bit **/
