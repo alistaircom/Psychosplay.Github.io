@@ -27,6 +27,8 @@ Version 14: Iron Selling/Breaking/AntiContract
 			Power
 				Powerlines
 			
+			Gilding
+			
 			AutoSaving
 Author: Psychos Play
 Thanks to: Neurofluxation

@@ -5,55 +5,47 @@
 		<title>Vertical Monopoly</title>
 		<link rel="stylesheet" type="text/css" href="styles.css" />
 	</head>
-<body>
-<table id="land">
+<body class="HolyGrail">
+
+  <div class="HolyGrail-body">
+    <nav class="HolyGrail-nav">
 		<caption><h1> Resources:</h1></caption>
-<tr>
-	<td>
+
 		<h2> <FONT COLOR="#006600">$<span id="Money"></span> K | $<span id="MoneyPS"></span> K/Second </FONT></h2>
 		<h2> Power: <span id="MWh"></span> Mega-Watt Hours at $<span STYLE="=font-size: 14pt" id="MWhCost"></span>K |	$<span id="MWhMoney"></span>K/Second </h2>
-		<h2> <FONT COLOR="#DFBC00"><span id="GoldCoin"></span> Gold Coins</FONT></h2>
-	</td>
-	<td>
+		<h2> <FONT COLOR="#DFBC00"><span id="GoldCoin"></span> Gold Coins</FONT></h2><br /><br />
+
 		<h2> <FONT COLOR="#666666"><span id="Iron"></span> Iron | <span id="IronPS"></span> Iron/Second | <span id="IronAntiContract"></span> Anti-Contracts</h2>
 		<h2> <span id="RefIron"></span> Refined Iron | <span id="RefIronPS"></span> Refined Iron/Second | <span id="RefIronAntiContract"></span> Anti-Contracts</FONT></h2>
 		<h2> <span id="Motor"></span> Motors | <span id="MotorPS"></span> Motors/Second | <span id="MotorAntiContract"></span> Anti-Contracts</FONT></h2>
 		<h2> <span id="Car"></span> Cars | <span id="CarPS"></span> Cars/Second | <span id="CarAntiContract"></span> Anti-Contracts</FONT></h2>
-		<h2> <span id="Plane"></span>/<span id="PlaneLimit"></span> Planes | <span id="PlanePS"></span> Planes in <span id="ThirtySecondCounter"></span> Seconds</h2>
-	</td>
-	<td>
+		<h2> <span id="Plane"></span>/<span id="PlaneLimit"></span> Planes | <span id="PlanePS"></span> Planes in <span id="ThirtySecondCounter"></span> Seconds</h2><br /><br />
+
 		<h2> <Font><span id="Coal"></span> Coal | <span id="CoalPS"></span> Coal/Second | <span id="CoalAntiContract"></span> Anti-Contracts</Font></h2>
 		<h2> <FONT COLOR="#000066"><span id="Steel"></span> Steel | <span id="SteelPS"></span> Steel/Second | <span id="SteelAntiContract"></span> Anti-Contracts </FONT></h2>
 		<h2> <span id="MechPart"></span> Mechanical Parts | <span id="MechPartPS"></span> Mechanical Parts/Second | <span id="MechPartAntiContract"></span> Anti-Contracts</FONT></h2>
-		<h2> <span id="AC"></span> A/C Unit | <span id="ACPS"></span> A/C Units/Second | <span id="ACAntiContract"></span> Anti-Contracts</FONT></h2>
-	</td>
-</tr>
-<tr>
-	<td>
+		<h2> <span id="AC"></span> A/C Unit | <span id="ACPS"></span> A/C Units/Second | <span id="ACAntiContract"></span> Anti-Contracts</FONT></h2><br /><br />
+
 		<h2> <FONT COLOR="#996600"><span id="Copper"></span> Copper | <span id="CopperPS"></span> Copper/Second | <span id="CopperAntiContract"></span> Anti-Contracts <br />
 		<span id="RefCopper"></span> Refined Copper | <span id="RefCopperPS"></span> Refined Copper/Second | <span id="RefCopperAntiContract"></span> Anti-Contracts <br />
 		<span id="Spool"></span> Spools | <span id="SpoolPS"></span> Spools/Second | <span id="SpoolAntiContract"></span> Anti-Contracts </FONT><br />
-		<FONT COLOR="#006600"><span id="Electronic"></span> Electronics | <span id="ElectronicPS"></span> Electronics/Second | <span id="ElecAntiContract"></span> Anti-Contracts </FONT></h2>
-	</td>
-	<td>
+		<FONT COLOR="#006600"><span id="Electronic"></span> Electronics | <span id="ElectronicPS"></span> Electronics/Second | <span id="ElecAntiContract"></span> Anti-Contracts </FONT></h2><br /><br />
+
 		<h2> <FONT><span id="Oil"></span> Oil | <span id="OilPS"></span> Oil/Second | <span id="OilAntiContract"></span> Anti-Contracts  </FONT></h2>
 		<h2> <FONT COLOR="#594d3e"><FONT><span id="Gas"></span> Gas | <span id="GasPS"></span> Gas/Second | <span id="GasAntiContract"></span> Anti-Contracts </FONT></h2>
-		<h2> <FONT><span id="Plastic"></span> Plastic | <span id="PlasticPS"></span> Plastic/Second | <span id="PlasticAntiContract"></span> Anti-Contracts </FONT></h2>
-	</td>
-	<td>
+		<h2> <FONT><span id="Plastic"></span> Plastic | <span id="PlasticPS"></span> Plastic/Second | <span id="PlasticAntiContract"></span> Anti-Contracts </FONT></h2><br /><br />
+
 		<h2> <FONT COLOR="#805500"><span id="Sand"></span> Sand | <span id="SandPS"></span> Sand/Second | <span id="SandAntiContract"></span> Anti-Contracts  </FONT></h2>
 		<h2> <FONT COLOR="#2952a3"><span id="Glass"></span> Glass | <span id="GlassPS"></span> Glass/Second | <span id="GlassAntiContract"></span> Anti-Contracts  </FONT></h2>
 		<h2> <FONT COLOR="#2952a3"><span id="Lightbulb"></span> Lightbulb | <span id="LightbulbPS"></span> Lightbulbs/Second | <span id="LightbulbAntiContract"></span> Anti-Contracts  </FONT></h2>
+		
+		<!-- also add in an empty status text area -->
+		<br /><br />
+		<h3><span id="tillautosave"> </span> seconds until autosave</h3>
+		<span id="status"></span>
 
-	</td>
-</tr>
-</table>
-		<br />
+</nav>
 	
-	<!-- also add in an empty status text area -->
-	<br /><br />
-	<h3><span id="tillautosave"> </span> seconds until autosave</h3>
-	<span id="status"></span>
 	
 	<div id="myModal" class="modal">
 
@@ -63,6 +55,8 @@
 		</div>
 
 	</div>
+	
+    <main class="HolyGrail-content">
 	<script src="engine.js"></script>
 	<ul class="tab">
 		<li><a href="#" class="tablinks" onclick="openCity(event, 'IronTab')">Iron</a></li>
@@ -653,7 +647,7 @@
 			<input type="button" id="load" value="Load" /> 
 			<input type="button" id="delete" value="Delete" />
 		</div>
-
-
+		</main>
+  </div>
   </body>
 </html>
