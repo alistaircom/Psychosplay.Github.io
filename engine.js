@@ -3995,7 +3995,7 @@ var Engine = {
 			//Iron
 			Engine.Display.Iron.innerHTML = numberWithCommas(Engine.Player.Iron);
 			Engine.Display.IronMine.innerHTML = Engine.Player.IronMine;
-			Engine.Display.IronMineCost.innerHTML = Engine.Player.IronMineCost;
+			Engine.Display.IronMineCost.innerHTML = numberWithCommas(Engine.Player.IronMineCost);
 			
 			Engine.Display.IronDrill.innerHTML = Engine.Player.IronDrill;
 			
@@ -4011,7 +4011,7 @@ var Engine = {
 			//RefIron
 			Engine.Display.RefIron.innerHTML = numberWithCommas(Engine.Player.RefIron);
 			Engine.Display.IRefinery.innerHTML = Engine.Player.IRefinery;
-			Engine.Display.IRefineryCost.innerHTML = Engine.Player.IRefineryCost;
+			Engine.Display.IRefineryCost.innerHTML = numberWithCommas(Engine.Player.IRefineryCost);
 			
 			Engine.Display.CombIRefinery.innerHTML = Engine.Player.CombIRefinery;
 			

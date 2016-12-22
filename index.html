@@ -195,30 +195,37 @@ Gold Coins: #DFBC00
 			<!-- Iron -->
 
 			<table class="unitCard">
+			<thead>
 				<tr>
-					<td colspan="2"><h2>Iron Mines: <span id="IronMine"></span></h2></td>
+					<th colspan="2"><h2>Iron Mines: <span id="IronMine"></span></h2></th>
 				</tr>
+			</thead>
+			<tbody>
 				<tr>
 					<td width="50%">
 						<p class="info">Consume</p><p>-</p>
 					</td>
 					<td>
 						<p class="info">Produce</p>
-						<p>5 Iron</p>
+						<p><span class="resource resIron">5 Iron</span></p>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<p class="info">Cost</p>
-						<p><span id="IronMineCost"></span>K</p>
+						<p>$<span id="IronMineCost"></span>K</p>
 					</td>
 					<td><input type="button" id="buyironmine" value="Buy 1" /></td>
 				</tr>
+				</tbody>
 			</table>
 			<table class="unitCard">
+				<thead>
 				<tr>
-					<td colspan="2"><h2>Iron Drills: <span id="IronDrill"></span></h2></td>
+					<th colspan="2"><h2>Iron Drills: <span id="IronDrill"></span></h2></th>
 				</tr>
+			</thead>
+			<tbody>
 				<tr>
 					<td width="50%">
 						<p class="info">Consume</p><p>1 Gas/sec</p>
@@ -235,27 +242,65 @@ Gold Coins: #DFBC00
 					</td>
 					<td><input type="button" id="upgradeironMine" value="Upgrade 1" /></td>
 				</tr>
+				</tbody>
 			</table>
-			<table style="width:100%">
-			<tr>
-				<td>
-					<h1>Iron Mines (5 Iron/Second):</h1>
-					<p><span id="IronMine"></span> Iron Mines | Cost: $<span id="IronMineCost"></span>K </p>
-					<input type="button" id="buyironmine" value="Buy 1" />
-				</td>
-				<td>
-					<h1> Iron Drill (20 Iron/1 Gas per Second):</h1>
-					<p><span id="IronDrill"></span> Iron Drills | Costs: 1 Drill | 1 Iron Mine</p>
-					<input type="button" id="upgradeironMine" value="Upgrade 1" />
-				</td>
-			</tr>
+			
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Iron Contracts: <span id="IronContract"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%">
+						<p class="info">Per Contract</p><p>$<span id="IronContractMoney"></span>k/10 Iron</p>
+					</td>
+					<td>
+						<p class="info">Total</p>
+						<p><span id="IronContractIron"></span> Iron for $<span id="IronContractMoney"></span> K</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="info">Cost</p>
+						<p><span id="IronContractCost"></span> Iron</p>
+					</td>
+					<td><input type="button" id="buyironcontract" value="Start 1" /><input type="button" id="breakironcontract" value="Break 1" /></td>
+				</tr>
 			</table>
-			<h1> Iron Contracts ($<span id="IronContractMoney"></span>k/10 Iron):</h1>
-			<p><span id="IronContract"></span> Iron Contracts | <span id="IronContractIron"></span> Iron for $<span id="IronContractMoney"></span> K | Cost: <span id="IronContractCost"></span> Iron </p>
-			<input type="button" id="buyironcontract" value="Start 1" /><input type="button" id="breakironcontract" value="Break 1" />
+			
 			<div class="divider"></div>
 			
 			<!-- Refined Iron -->
+
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Iron Refineries: <span id="IRefinery"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%">
+						<p class="info">Consume</p><p><span class="resource resIron">20 Iron</span> + <span class="resource resPower">1MWh</span> /second</p>
+					</td>
+					<td>
+						<p class="info">Produce</p>
+						<p><span class="resource resCopper">10 Refined Iron/s</span></p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="info">Cost</p>
+						<p><span class="resource resMoney">$<span id="IRefineryCost"></span>K</span></p>
+					</td>
+					<td><input type="button" id="buyirefinery" value="Buy 1" /></td>
+				</tr>
+				</tbody>
+			</table>
+
+
 			<table style="width:100%">
 			<tr>
 				<td>

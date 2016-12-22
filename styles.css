@@ -171,24 +171,33 @@ tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
 
 /* Backgrounds */
 
-tr#IronResource td, tr#RefIronResource td, tr#MotorResource td, tr#CarResource td, tr#PlaneResource td {
+.resIron, tr#IronResource td, tr#RefIronResource td, tr#MotorResource td, tr#CarResource td, tr#PlaneResource td {
     background-color: #f6f6f6;
 }
 
-tr#CoalResource td, tr#SteelResource td, tr#MechPartResource td, tr#ACResource td {
+.resCoal, tr#CoalResource td, tr#SteelResource td, tr#MechPartResource td, tr#ACResource td {
     background-color: #e2e2e2;
 }
 
-tr#CopperResource td, tr#SpoolResource td, tr#RefCopperResource td, tr#ElectronicResource td {
+.resCopper, tr#CopperResource td, tr#SpoolResource td, tr#RefCopperResource td, tr#ElectronicResource td {
     background-color: #efe6de;
 }
 
-tr#OilResource td, tr#GasResource td, tr#PlasticResource td {
+.resOil, tr#OilResource td, tr#GasResource td, tr#PlasticResource td {
     background-color: #d1c5ba;
 }
 
-tr#SandResource td, tr#GlassResource td, tr#LightbulbResource td {
+.resSand, tr#SandResource td, tr#GlassResource td, tr#LightbulbResource td {
     background-color: #d0dfe2;
+}
+
+.resPower {
+    background-color: #f4f3e3;
+}
+
+.resMoney {
+    background-color: #dfedde;
+    color: #516b51;
 }
 
 /* Dividers */
@@ -198,6 +207,7 @@ tr#SandResource td, tr#GlassResource td, tr#LightbulbResource td {
     display: block;
     border-bottom: 1px solid silver;
     margin: 1em 0; 
+    clear: both;
 }
 
 /* Unit Cards */
@@ -207,25 +217,40 @@ tr#SandResource td, tr#GlassResource td, tr#LightbulbResource td {
         width: 45%;
         float: left;
         margin-right: 2%;
+        margin-bottom: 2%;
     }
-        table.unitCard td {
-            position: relative;
-            border: 1px solid #666;
-            padding: .5em;
-        }
 
-        table.unitCard td p {
-            margin: 1em 0 0 0;
-        }
+    table.unitCard h2 {
+        font-size: .75em;
+        text-align: left;
+    }
 
-        table.unitCard td p.info {
-            position: absolute;
-            padding: .325em;
-            background: #666;
-            color: white;
-            font-size: .625em;
-            font-weight: 700;
-            top:0;
-            left:0;
-            margin: 0;
-        }
+    table.unitCard td {
+        position: relative;
+        border: 1px solid #666;
+        padding: .5em;
+    }
+
+    table.unitCard td p {
+        margin: 1em 0 0 0;
+    }
+
+    table.unitCard td p.info {
+        position: absolute;
+        padding: .325em;
+        background: #666;
+        color: white;
+        font-size: .625em;
+        font-weight: 700;
+        top:0;
+        left:0;
+        margin: 0;
+    }
+
+/* Resources */
+
+.resource {
+    padding: .25em;
+    border-radius: 3px;
+    border: 1px solid silver;
+}
