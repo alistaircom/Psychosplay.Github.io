@@ -172,19 +172,21 @@ tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
 /* Backgrounds */
 
 .resIron, tr#IronResource td, tr#RefIronResource td, tr#MotorResource td, tr#CarResource td, tr#PlaneResource td {
-    background-color: #f6f6f6;
-}
-
-.resCoal, tr#CoalResource td, tr#SteelResource td, tr#MechPartResource td, tr#ACResource td {
     background-color: #e2e2e2;
 }
 
+.resCoal, tr#CoalResource td, tr#SteelResource td, tr#MechPartResource td, tr#ACResource td {
+    background-color: #333333;
+    color: #eeeeee;
+}
+
 .resCopper, tr#CopperResource td, tr#SpoolResource td, tr#RefCopperResource td, tr#ElectronicResource td {
-    background-color: #efe6de;
+    background-color: #e4952e;
 }
 
 .resOil, tr#OilResource td, tr#GasResource td, tr#PlasticResource td {
-    background-color: #d1c5ba;
+    background-color: #8e6948;
+    color: #eeeeee;
 }
 
 .resSand, tr#SandResource td, tr#GlassResource td, tr#LightbulbResource td {
@@ -192,7 +194,8 @@ tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
 }
 
 .resPower {
-    background-color: #f4f3e3;
+    background-color: #FDD023;
+    color: #8e3d04;
 }
 
 .resMoney {
@@ -214,7 +217,7 @@ tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
 
     table.unitCard {
         border-collapse: collapse;
-        width: 45%;
+        width: 30%;
         float: left;
         margin-right: 2%;
         margin-bottom: 2%;
@@ -232,19 +235,13 @@ tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
     }
 
     table.unitCard td p {
-        margin: 1em 0 0 0;
+        margin: .5em;
+        text-align: center;
+        font-weight: 800;
     }
 
-    table.unitCard td p.info {
-        position: absolute;
-        padding: .325em;
-        background: #666;
-        color: white;
-        font-size: .625em;
-        font-weight: 700;
-        top:0;
-        left:0;
-        margin: 0;
+    table.unitCard td p span {
+        font-weight: 400;
     }
 
 /* Resources */
@@ -252,5 +249,41 @@ tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
 .resource {
     padding: .25em;
     border-radius: 3px;
-    border: 1px solid silver;
+    border: 1px solid #444;
+}
+
+/* Buttons */
+
+.btn {
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #666;
+    border-bottom: 3px solid #666;
+    /* box-shadow: 0px 1px 3px #666666; */
+    font-family: "Libre Franklin", "Helvetica Neue", Sans-serif;
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+    outline: none;
+    padding: .25em .5em;    
+    margin-right: .25em;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:active {
+    outline: none;  
+    border-bottom: 1px solid #666;
+}
+
+
+/* Legend */
+
+.legend {
+    background-color: #333;
+    color: #eee;
+    font-size: 11px;
+    border-radius: 3px;
+    padding: .25em .5em;
 }

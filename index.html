@@ -4,6 +4,14 @@
 		<meta charset="utf-8">
 		<title>Vertical Monopoly</title>
 		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+		$( document ).ready(function() {
+			$( "#legendtoggle" ).click(function() {
+  				$( ".legend" ).slideToggle(250);
+			  });
+			});
+		</script>
 	</head>
 <body class="HolyGrail">
 <!-- Colors
@@ -16,8 +24,8 @@ Gold Coins: #DFBC00
     <nav class="HolyGrail-nav">
 		<caption><h1>Resources:</h1></caption>
 
-		<p>$<span id="Money"></span> K | $<span id="MoneyPS"></span> K/Second</p>
-		<p> Power: <span id="MWh"></span> Mega-Watt Hours at $<span id="MWhCost"></span>K |	$<span id="MWhMoney"></span>K/Second</p>
+		<p>💵 <span class="resource resMoney">$<span id="Money"></span>K</span> | $<span id="MoneyPS"></span> K/Second</p>
+		<p>⚡ <span class="resource resPower"><span id="MWh"></span> MWh</span> (Mega-Watt Hours) at $<span id="MWhCost"></span>K |	$<span id="MWhMoney"></span>K/Second</p>
 		<div id="GoldCoinResource" class="swHide"><p><span id="GoldCoin"></span> Gold Coins</p></div>
 
 
@@ -125,7 +133,7 @@ Gold Coins: #DFBC00
 				<td><span id="GasAntiContract"></span></td>
 			</tr>
 			<tr id="PlasticResource" class="swHide">
-				<td>Spool</td>
+				<td>Plastic</td>
 				<td><span id="Plastic"></span></td>
 				<td><span id="PlasticPS"></span>/s</td>
 				<td><span id="PlasticAntiContract"></span></td>
@@ -189,6 +197,7 @@ Gold Coins: #DFBC00
 		<!-- <li><a href="#" class="tablinks" onclick="openCity(event, 'LandTab')">Land</a></li>-->
 		<li><a href="#" class="tablinks" onclick="openCity(event, 'OptionsTab')">Options</a></li>
 		<li><a href="#" class="tablinks" onclick="openCity(event, 'HelpTab')">Help</a></li>
+		<li><a href="#" class="tablinks" id="legendtoggle">Toggle Legend</a></li>		
 	</ul>
 
 		<div id="IronTab" class="tabcontent">
@@ -202,48 +211,41 @@ Gold Coins: #DFBC00
 			</thead>
 			<tbody>
 				<tr>
-					<td width="50%">
-						<p class="info">Consume</p><p>-</p>
-					</td>
-					<td>
-						<p class="info">Produce</p>
-						<p><span class="resource resIron">5 Iron</span></p>
+					<td width="50%" colspan="2">
+						<p><span class="resource resIron">5 Iron</span> /s</p>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<p class="info">Cost</p>
-						<p>$<span id="IronMineCost"></span>K</p>
+						<p><span class="resource resMoney">$<span id="IronMineCost"></span>K</span></p>
 					</td>
-					<td><input type="button" id="buyironmine" value="Buy 1" /></td>
+					<td><p><input type="button" id="buyironmine" class="btn" value="Buy 1" /></p></td>
 				</tr>
 				</tbody>
 			</table>
+
+
 			<table class="unitCard">
-				<thead>
+			<thead>
 				<tr>
 					<th colspan="2"><h2>Iron Drills: <span id="IronDrill"></span></h2></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td width="50%">
-						<p class="info">Consume</p><p>1 Gas/sec</p>
-					</td>
-					<td>
-						<p class="info">Produce</p>
-						<p>20 Iron</p>
+					<td width="50%" colspan="2">
+						<p><span class="resource resOil">1 Gas</span> /s = <span class="resource resIron">20 Iron</span> /s</p>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<p class="info">Cost</p>
-						<p>1 Drill, 1 Iron Mine</p>
+						<p><span class="resource">1 Iron Mine &#9881;</span> + <span class="resource">1 Drill &#128293;</span> </p>
 					</td>
-					<td><input type="button" id="upgradeironMine" value="Upgrade 1" /></td>
+					<td><p><input type="button" id="upgradeironMine" class="btn" value="Upgrade 1" /></p></td>
 				</tr>
 				</tbody>
 			</table>
+						
 			
 			<table class="unitCard">
 			<thead>
@@ -266,7 +268,7 @@ Gold Coins: #DFBC00
 						<p class="info">Cost</p>
 						<p><span id="IronContractCost"></span> Iron</p>
 					</td>
-					<td><input type="button" id="buyironcontract" value="Start 1" /><input type="button" id="breakironcontract" value="Break 1" /></td>
+					<td><p><input type="button" id="buyironcontract" class="btn" value="Start 1" /><input type="button" id="breakironcontract" class="btn" value="Break 1" /></p></td>
 				</tr>
 			</table>
 			
@@ -282,36 +284,52 @@ Gold Coins: #DFBC00
 			</thead>
 			<tbody>
 				<tr>
-					<td width="50%">
-						<p class="info">Consume</p><p><span class="resource resIron">20 Iron</span> + <span class="resource resPower">1MWh</span> /second</p>
-					</td>
-					<td>
-						<p class="info">Produce</p>
-						<p><span class="resource resCopper">10 Refined Iron/s</span></p>
+					<td width="50%" colspan="2">
+						<p>( <span class="resource resIron">20 Iron</span> + <span class="resource resPower">1 MWh</span> ) /s = <span class="resource resIron">10 Refined Iron</span> /s</p>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<p class="info">Cost</p>
 						<p><span class="resource resMoney">$<span id="IRefineryCost"></span>K</span></p>
 					</td>
-					<td><input type="button" id="buyirefinery" value="Buy 1" /></td>
+					<td><p><input type="button" id="buyirefinery" class="btn" value="Buy 1" /></p></td>
 				</tr>
 				</tbody>
 			</table>
 
+
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Combined Iron Refinery and Smelteries: <span id="IRefinery"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" colspan="2">
+						<p>( <span class="resource resIron">40 Iron</span> + <span class="resource resPower">1 MWh</span> ) /s = <span class="resource resIron">30 Refined Iron</span> /s</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><span class="resource">1 Iron Refinery &#9881;</span> + <span class="resource">1 Furnace &#128293;</span> </p>
+					</td>
+					<td><p><input type="button" id="upgradeirefinery" class="btn" value="Upgrade 1" /></p></td>
+				</tr>
+				</tbody>
+			</table>
 
 			<table style="width:100%">
 			<tr>
 				<td>
 					<h1> Iron Refineries (20 Iron -> 10 Refined Iron/1MWh per Second):</h1>
 					<p><span id="IRefinery"></span> Iron Refineries | <span id="IRefineryIron"></span> Iron Spent per Second | Cost: $<span id="IRefineryCost"></span> K </p>
-					<input type="button" id="buyirefinery" value="Buy 1" /> 
+					<input type="button" id="buyirefinery" class="btn" value="Buy 1" /> 
 				</td>
 				<td>
 					<h1> Combined Iron Refinery and Smeltery (40 Iron -> 30 Refined Iron/1MWh per Second):</h1>
 					<p><span id="CombIRefinery"></span> Combined Iron Refineries | <span id="CombIRefineryIron"></span> Iron Spent per Second | Cost: 1 Furnace + 1 Iron Refinery</p>
-					<input type="button" id="upgradeirefinery" value="Upgrade 1" /> 
+					<input type="button" id="upgradeirefinery" class="btn" value="Upgrade 1" /> 
 				</td>
 			</tr>
 			</table>
@@ -376,24 +394,85 @@ Gold Coins: #DFBC00
 		<div id="CoalTab" class="tabcontent">
 			<span id="GenCoalStatus2"></span>
 			<!-- Coal -->
-			<table style="width:100%">
-			<tr>
-				<td>
-					<h1> Coal Mines (3 Coal/Second):</h1>
-					<p><span id="CoalMine"></span> Coal Mines | Cost: $<span id="CoalMineCost"></span> K </p>
-					<input type="button" id="buyCoalmine" value="Buy 1" /> 
-				</td>
-				<td>
-					<h1> Coal Drill (12 Coal/1 Gas per Second):</h1>
-					<p><span id="CoalDrill"></span> Coal Drills | Costs: 1 Drill | 1 Coal Mine</p>
-					<input type="button" id="upgradeCoalMine" value="Upgrade 1" />
-				</td>
-			</tr>
+
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Coal Mines: <span id="CoalMine"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" colspan="2">
+						<p class="legend">Formula</p>
+						<p><span class="resource resCoal">3 Coal</span> /s</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="legend">Cost</p>
+						<p><span class="resource resMoney">$<span id="CoalMineCost"></span>K</span></p>
+					</td>
+					<td>
+					<p class="legend">Transaction</p>
+					<p><input type="button" id="buyCoalmine" class="btn" value="Buy 1" /></p></td>
+				</tr>
+				</tbody>
 			</table>
-			<h1> Coal Contracts ($<span id="CoalContractMoney"></span>k/10 Coal):</h1>
-			<p><span id="CoalContract"></span> Coal Contracts | <span id="CoalContractCoal"></span> Coal for $<span id="CoalContractMoney"></span> K | Cost: <span id="CoalContractCost"></span> Coal </p>
-			<input type="button" id="buyCoalcontract" value="Start 1" /><input type="button" id="breakCoalcontract" value="Break 1" /> 
-			<div class="divider"></div>
+
+
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Coal Drills: <span id="CoalDrill"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" colspan="2">
+						<p class="legend">Formula</p>
+						<p><span class="resource resOil">1 Gas</span> /s = <span class="resource resCoal">12 Coal</span> /s</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="legend">Cost</p>
+						<p><span class="resource">1 Coal Mine &#9881;</span> + <span class="resource">1 Drill &#128293;</span> </p>
+					</td>
+					<td><p class="legend">Transaction</p>
+					<p><input type="button" id="upgradeCoalMine" class="btn" value="Upgrade 1" /></p></td>
+				</tr>
+				</tbody>
+			</table>
+
+
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Coal Contracts: <span id="CoalContract"></span> (Currently <span id="CoalContractCoal"></span>)</h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" colspan="2">
+						<p class="legend">Formula</p>
+						<p><span class="resource resCoal">10 Coal</span> /s = <span class="resource resMoney">$<span id="CoalContractMoney"></span>K</span> /s</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="legend">Cost</p>
+						<p><span class="resource resCoal"><span id="CoalContractCost"></span> Coal</span> </p>
+					</td>
+					<td>
+					<p class="legend">Transaction</p>
+					<p><input type="button" id="buyCoalcontract" value="Start 1" /><input type="button" id="breakCoalcontract" value="Break 1" /></p></td>
+				</tr>
+				</tbody>
+			</table>
+
+
+
 	
 			<!-- Steel -->
 			<table style="width:100%">
@@ -458,6 +537,49 @@ Gold Coins: #DFBC00
 		<div id="CopperTab" class="tabcontent">
 			<span id="GenCopperStatus2"></span>
 			<!-- Copper -->
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Copper Mines: <span id="CopperMine"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" colspan="2">
+						<p><span class="resource resCopper">5 Copper</span> /s</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><span class="resource resMoney">$<span id="CopperMineCost"></span>K</span></p>
+					</td>
+					<td><p><input type="button" id="buyCoppermine" class="btn" value="Buy 1" /></p></td>
+				</tr>
+				</tbody>
+			</table>
+
+
+			<table class="unitCard">
+			<thead>
+				<tr>
+					<th colspan="2"><h2>Copper Drills: <span id="CopperDrill"></span></h2></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td width="50%" colspan="2">
+						<p><span class="resource resOil">1 Gas</span> /s = <span class="resource resCopper">12 Copper</span> /s</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><span class="resource">1 Copper Mine &#9881;</span> + <span class="resource">1 Drill &#128293;</span> </p>
+					</td>
+					<td><p><input type="button" id="upgradeCopperMine" class="btn" value="Upgrade 1" /></p></td>
+				</tr>
+				</tbody>
+			</table>
+
 			<table style="width:100%">
 			<tr>
 				<td>
