@@ -3977,6 +3977,9 @@ var Engine = {
 				}
 			}
 			
+			function numberWithCommas(x) {
+    			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+			}
 			
 			//Power
 			Engine.Player.MWh = Engine.Player.CoalPlant*40 + Engine.Player.SolarPlant*5 + Engine.Player.SolarRoad*10 + Engine.Player.NuclearPlant*150 - (Engine.Player.IRefinery + Engine.Player.SRefinery + Engine.Player.CRefinery + Engine.Player.CombIRefinery + Engine.Player.CombSRefinery + Engine.Player.CombCRefinery + Engine.Player.GRefinery + Engine.Player.PRefinery)*1 - (Engine.Player.MotorFact + Engine.Player.MechPartFact + Engine.Player.ConsPartFact + Engine.Player.Spooler + Engine.Player.ElecFact + Engine.Player.LightbulbFact + Engine.Player.ACFact + Engine.Player.CarFact)*3 - (Engine.Player.MotorFactArm + Engine.Player.MechPartFactArm + Engine.Player.SpoolerArm + Engine.Player.ElecFactArm + Engine.Player.LightbulbFactArm + Engine.Player.ACFactArm + Engine.Player.CarFactArm)*15 - (Engine.Player.Shifter + Engine.Player.Workshop + Engine.Player.Apartment + Engine.Player.Office + Engine.Player.Dealership)*2;
@@ -3986,11 +3989,11 @@ var Engine = {
 			Engine.Player.Money += Math.round(Engine.Player.MWh*Engine.Player.MWhCost);
 			
 			
-			Engine.Display.Money.innerHTML = Engine.Player.Money;
-			Engine.Display.MoneyPS.innerHTML = Engine.Values.MoneyPS;
+			Engine.Display.Money.innerHTML = numberWithCommas(Engine.Player.Money);
+			Engine.Display.MoneyPS.innerHTML = numberWithCommas(Engine.Values.MoneyPS);
 			
 			//Iron
-			Engine.Display.Iron.innerHTML = Engine.Player.Iron;
+			Engine.Display.Iron.innerHTML = numberWithCommas(Engine.Player.Iron);
 			Engine.Display.IronMine.innerHTML = Engine.Player.IronMine;
 			Engine.Display.IronMineCost.innerHTML = Engine.Player.IronMineCost;
 			
@@ -4006,7 +4009,7 @@ var Engine = {
 			Engine.Display.IronContractMoney.innerHTML = Engine.Values.IronContractMoney;
 			
 			//RefIron
-			Engine.Display.RefIron.innerHTML = Engine.Player.RefIron;
+			Engine.Display.RefIron.innerHTML = numberWithCommas(Engine.Player.RefIron);
 			Engine.Display.IRefinery.innerHTML = Engine.Player.IRefinery;
 			Engine.Display.IRefineryCost.innerHTML = Engine.Player.IRefineryCost;
 			
@@ -4023,7 +4026,7 @@ var Engine = {
 			Engine.Display.RefIronContractMoney.innerHTML = Engine.Values.RefIronContractMoney;
 			
 			//Motor
-			Engine.Display.Motor.innerHTML = Engine.Player.Motor;
+			Engine.Display.Motor.innerHTML = numberWithCommas(Engine.Player.Motor);
 			Engine.Display.MotorFact.innerHTML = Engine.Player.MotorFact;
 			Engine.Display.MotorFactArm.innerHTML = Engine.Player.MotorFactArm;
 			Engine.Display.MotorFactCost.innerHTML = Engine.Player.MotorFactCost;
@@ -4040,7 +4043,7 @@ var Engine = {
 			Engine.Display.MotorContractMoney.innerHTML = Engine.Values.MotorContractMoney;
 			
 			//Car
-			Engine.Display.Car.innerHTML = Engine.Player.Car;
+			Engine.Display.Car.innerHTML = numberWithCommas(Engine.Player.Car);
 			Engine.Display.CarFact.innerHTML = Engine.Player.CarFact;
 			Engine.Display.CarFactArm.innerHTML = Engine.Player.CarFactArm;
 			Engine.Display.CarFactCost.innerHTML = Engine.Player.CarFactCost;
@@ -4059,7 +4062,7 @@ var Engine = {
 			Engine.Display.CarContractMoney.innerHTML = Engine.Values.CarContractMoney;
 			
 			//Plane
-			Engine.Display.Plane.innerHTML = Engine.Player.Plane;
+			Engine.Display.Plane.innerHTML = numberWithCommas(Engine.Player.Plane);
 			Engine.Display.PlaneFact.innerHTML = Engine.Player.PlaneFact;
 			Engine.Display.PlaneFactCost.innerHTML = Engine.Player.PlaneFactCost;
 			Engine.Display.ThirtySecondCounter.innerHTML = (30 - Engine.Player.ThirtySecondCounter);
@@ -4071,7 +4074,7 @@ var Engine = {
 			Engine.Display.PlaneFactGlass.innerHTML = Engine.Values.PlaneFactGlass;
 			
 			//Coal
-			Engine.Display.Coal.innerHTML = Engine.Player.Coal;
+			Engine.Display.Coal.innerHTML = numberWithCommas(Engine.Player.Coal);
 			Engine.Display.CoalMine.innerHTML = Engine.Player.CoalMine;
 			Engine.Display.CoalMineCost.innerHTML = Engine.Player.CoalMineCost;
 			
@@ -4087,7 +4090,7 @@ var Engine = {
 			Engine.Display.CoalContractMoney.innerHTML = Engine.Values.CoalContractMoney;
 			
 			//Steel
-			Engine.Display.Steel.innerHTML = Engine.Player.Steel;
+			Engine.Display.Steel.innerHTML = numberWithCommas(Engine.Player.Steel);
 			Engine.Display.SRefinery.innerHTML = Engine.Player.SRefinery;
 			Engine.Display.SRefineryCost.innerHTML = Engine.Player.SRefineryCost;
 			
@@ -4105,7 +4108,7 @@ var Engine = {
 			Engine.Display.SteelContractMoney.innerHTML = Engine.Values.SteelContractMoney;
 			
 			//MechPart
-			Engine.Display.MechPart.innerHTML = Engine.Player.MechPart;
+			Engine.Display.MechPart.innerHTML = numberWithCommas(Engine.Player.MechPart);
 			Engine.Display.MechPartFact.innerHTML = Engine.Player.MechPartFact;
 			Engine.Display.MechPartFactArm.innerHTML = Engine.Player.MechPartFactArm;
 			Engine.Display.MechPartFactCost.innerHTML = Engine.Player.MechPartFactCost;
@@ -4117,7 +4120,7 @@ var Engine = {
 			Engine.Display.MechPartFactRefCopper.innerHTML = Engine.Values.MechPartFactRefCopper;
 			
 			//ConsPart
-			Engine.Display.ConsPart.innerHTML = Engine.Player.ConsPart;
+			Engine.Display.ConsPart.innerHTML = numberWithCommas(Engine.Player.ConsPart);
 			Engine.Display.ConsPartFact.innerHTML = Engine.Player.ConsPartFact;
 			Engine.Display.ConsPartFactCost.innerHTML = Engine.Player.ConsPartFactCost;
 			
@@ -4127,7 +4130,7 @@ var Engine = {
 			Engine.Display.ConsPartFactSteel.innerHTML = Engine.Values.ConsPartFactSteel;
 			
 			//AC
-			Engine.Display.AC.innerHTML = Engine.Player.AC;
+			Engine.Display.AC.innerHTML = numberWithCommas(Engine.Player.AC);
 			Engine.Display.ACFact.innerHTML = Engine.Player.ACFact;
 			Engine.Display.ACFactCost.innerHTML = Engine.Player.ACFactCost;
 			
@@ -4146,7 +4149,7 @@ var Engine = {
 			Engine.Display.ACContractMoney.innerHTML = Engine.Values.ACContractMoney;
 			
 			//Copper
-			Engine.Display.Copper.innerHTML = Engine.Player.Copper;
+			Engine.Display.Copper.innerHTML = numberWithCommas(Engine.Player.Copper);
 			Engine.Display.CopperMine.innerHTML = Engine.Player.CopperMine;
 			Engine.Display.CopperMineCost.innerHTML = Engine.Player.CopperMineCost;
 			
@@ -4162,7 +4165,7 @@ var Engine = {
 			Engine.Display.CopperContractMoney.innerHTML = Engine.Values.CopperContractMoney;
 			
 			//RefCopper
-			Engine.Display.RefCopper.innerHTML = Engine.Player.RefCopper;
+			Engine.Display.RefCopper.innerHTML = numberWithCommas(Engine.Player.RefCopper);
 			Engine.Display.CRefinery.innerHTML = Engine.Player.CRefinery;
 			Engine.Display.CRefineryCost.innerHTML = Engine.Player.CRefineryCost;
 			
@@ -4179,7 +4182,7 @@ var Engine = {
 			Engine.Display.RefCopperContractMoney.innerHTML = Engine.Values.RefCopperContractMoney;
 			
 			//Spool
-			Engine.Display.Spool.innerHTML = Engine.Player.Spool;
+			Engine.Display.Spool.innerHTML = numberWithCommas(Engine.Player.Spool);
 			Engine.Display.Spooler.innerHTML = Engine.Player.Spooler;
 			Engine.Display.SpoolerCost.innerHTML = Engine.Player.SpoolerCost;
 			
@@ -4196,7 +4199,7 @@ var Engine = {
 			Engine.Display.SpoolContractMoney.innerHTML = Engine.Values.SpoolContractMoney;
 			
 			//Electronic
-			Engine.Display.Electronic.innerHTML = Engine.Player.Electronic;
+			Engine.Display.Electronic.innerHTML = numberWithCommas(Engine.Player.Electronic);
 			Engine.Display.ElecFact.innerHTML = Engine.Player.ElecFact;
 			Engine.Display.ElecFactCost.innerHTML = Engine.Player.ElecFactCost;
 			
@@ -4221,7 +4224,7 @@ var Engine = {
 			
 			
 			//Oil
-			Engine.Display.Oil.innerHTML = Engine.Player.Oil;
+			Engine.Display.Oil.innerHTML = numberWithCommas(Engine.Player.Oil);
 			Engine.Display.OilMine.innerHTML = Engine.Player.OilMine;
 			Engine.Display.OilMineCost.innerHTML = Engine.Player.OilMineCost;
 			
@@ -4230,7 +4233,7 @@ var Engine = {
 			Engine.Display.OilPS.innerHTML = Engine.Values.OilPS;
 			
 			//Gas
-			Engine.Display.Gas.innerHTML = Engine.Player.Gas;
+			Engine.Display.Gas.innerHTML = numberWithCommas(Engine.Player.Gas);
 			Engine.Display.GRefinery.innerHTML = Engine.Player.GRefinery;
 			Engine.Display.GRefineryCost.innerHTML = Engine.Player.GRefineryCost;
 			
@@ -4245,7 +4248,7 @@ var Engine = {
 			Engine.Display.GasContractMoney.innerHTML = Engine.Values.GasContractMoney;
 			
 			//Plastic
-			Engine.Display.Plastic.innerHTML = Engine.Player.Plastic;
+			Engine.Display.Plastic.innerHTML = numberWithCommas(Engine.Player.Plastic);
 			Engine.Display.PRefinery.innerHTML = Engine.Player.PRefinery;
 			Engine.Display.PRefineryCost.innerHTML = Engine.Player.PRefineryCost;
 			
@@ -4267,7 +4270,7 @@ var Engine = {
 			
 			
 			//Sand
-			Engine.Display.Sand.innerHTML = Engine.Player.Sand;
+			Engine.Display.Sand.innerHTML = numberWithCommas(Engine.Player.Sand);
 			Engine.Display.Shifter.innerHTML = Engine.Player.Shifter;
 			Engine.Display.ShifterMotorCost.innerHTML = Engine.Player.ShifterMotorCost;
 			Engine.Display.ShifterMechCost.innerHTML = Engine.Player.ShifterMechCost;
@@ -4278,7 +4281,7 @@ var Engine = {
 			
 			
 			//Glass
-			Engine.Display.Glass.innerHTML = Engine.Player.Glass;
+			Engine.Display.Glass.innerHTML = numberWithCommas(Engine.Player.Glass);
 			Engine.Display.GlassFurnace.innerHTML = Engine.Player.GlassFurnace;
 			
 			Engine.Display.GlassContract.innerHTML = Engine.Player.GlassContract;
@@ -4288,7 +4291,7 @@ var Engine = {
 			Engine.Display.GlassPS.innerHTML = Engine.Values.GlassPS;
 			
 			//Lightbulb
-			Engine.Display.Lightbulb.innerHTML = Engine.Player.Lightbulb;
+			Engine.Display.Lightbulb.innerHTML = numberWithCommas(Engine.Player.Lightbulb);
 			Engine.Display.LightbulbFact.innerHTML = Engine.Player.LightbulbFact;
 			Engine.Display.LightbulbFactCost.innerHTML = Engine.Player.LightbulbFactCost;
 			

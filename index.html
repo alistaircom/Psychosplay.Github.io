@@ -193,6 +193,49 @@ Gold Coins: #DFBC00
 
 		<div id="IronTab" class="tabcontent">
 			<!-- Iron -->
+
+			<table class="unitCard">
+				<tr>
+					<td colspan="2"><h2>Iron Mines: <span id="IronMine"></span></h2></td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<p class="info">Consume</p><p>-</p>
+					</td>
+					<td>
+						<p class="info">Produce</p>
+						<p>5 Iron</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="info">Cost</p>
+						<p><span id="IronMineCost"></span>K</p>
+					</td>
+					<td><input type="button" id="buyironmine" value="Buy 1" /></td>
+				</tr>
+			</table>
+			<table class="unitCard">
+				<tr>
+					<td colspan="2"><h2>Iron Drills: <span id="IronDrill"></span></h2></td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<p class="info">Consume</p><p>1 Gas/sec</p>
+					</td>
+					<td>
+						<p class="info">Produce</p>
+						<p>20 Iron</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="info">Cost</p>
+						<p>1 Drill, 1 Iron Mine</p>
+					</td>
+					<td><input type="button" id="upgradeironMine" value="Upgrade 1" /></td>
+				</tr>
+			</table>
 			<table style="width:100%">
 			<tr>
 				<td>
@@ -210,7 +253,7 @@ Gold Coins: #DFBC00
 			<h1> Iron Contracts ($<span id="IronContractMoney"></span>k/10 Iron):</h1>
 			<p><span id="IronContract"></span> Iron Contracts | <span id="IronContractIron"></span> Iron for $<span id="IronContractMoney"></span> K | Cost: <span id="IronContractCost"></span> Iron </p>
 			<input type="button" id="buyironcontract" value="Start 1" /><input type="button" id="breakironcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<!-- Refined Iron -->
 			<table style="width:100%">
@@ -231,7 +274,7 @@ Gold Coins: #DFBC00
 			<h1> Refined Iron Contracts ($<span id="RefIronContractMoney"></span>k/10 Refined Iron):</h1>
 			<p><span id="RefIronContract"></span> Refined Iron Contracts | <span id="RefIronContractRefIron"></span> Refined Iron for $<span id="RefIronContractMoney"></span> K | Cost: <span id="RefIronContractCost"></span> Refined Iron </p>
 			<input type="button" id="buyrefironcontract" value="Start 1" /><input type="button" id="breakrefironcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<!-- Motor -->
 			<table style="width:100%">
@@ -252,7 +295,7 @@ Gold Coins: #DFBC00
 			<h1> Motor Contracts ($<span id="MotorContractMoney"></span>k/Motor):</h1>
 			<p><span id="MotorContract"></span> Motor Contracts | <span id="MotorContractMotor"></span> Motor for $<span id="MotorContractMoney"></span> K | Cost: <span id="MotorContractCost"></span> Motor </p>
 			<input type="button" id="buyMotorcontract" value="Start 1" /><input type="button" id="breakMotorcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		
 			<!-- Car -->
 			<table style="width:100%">
@@ -273,13 +316,13 @@ Gold Coins: #DFBC00
 			<h1> Car Contracts ($<span id="CarContractMoney"></span>k/5 Cars):</h1>
 			<p><span id="CarContract"></span> Car Contracts | <span id="CarContractCar"></span> Car for $<span id="CarContractMoney"></span> K | Cost: <span id="CarContractCost"></span> Car </p>
 			<input type="button" id="buyCarcontract" value="Start 1" /><input type="button" id="breakCarcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		
 			<!-- Plane -->
 			<h1> Plane Factory (10 Motors + 70 Mechanical Parts + 50 Electronics + 20 Glass -> 1 Planes/15MWh per 30 Seconds):</h1>
 			<p><span id="PlaneFact"></span> Plane Factories | <span id="PlaneFactMotor"></span> Motors/Second | <span id="PlaneFactMechPart"></span> Mechanical Parts/Second | <span id="PlaneFactElec"></span> Electronics/Second | <span id="PlaneFactGlass"></span> Glass/Second | Cost: $<span id="PlaneFactCost"></span> K + 1 Automated Car Factory</p>
 			<input type="button" id="buyPlaneFact" value="Buy 1" /> 
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 		</div><!-- /#IronTab -->
 
@@ -305,7 +348,7 @@ Gold Coins: #DFBC00
 			<h1> Coal Contracts ($<span id="CoalContractMoney"></span>k/10 Coal):</h1>
 			<p><span id="CoalContract"></span> Coal Contracts | <span id="CoalContractCoal"></span> Coal for $<span id="CoalContractMoney"></span> K | Cost: <span id="CoalContractCost"></span> Coal </p>
 			<input type="button" id="buyCoalcontract" value="Start 1" /><input type="button" id="breakCoalcontract" value="Break 1" /> 
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 	
 			<!-- Steel -->
 			<table style="width:100%">
@@ -325,7 +368,7 @@ Gold Coins: #DFBC00
 			<h1> Steel Contracts ($<span id="SteelContractMoney"></span>k/10 Steel):</h1>
 			<p><span id="SteelContract"></span> Steel Contracts | <span id="SteelContractSteel"></span> Steel for $<span id="SteelContractMoney"></span> K | Cost: <span id="SteelContractCost"></span> Steel </p>
 			<input type="button" id="buysteelcontract" value="Start 1" /><input type="button" id="breaksteelcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			<table style="width:100%">
 			<tr>
 				<td>
@@ -342,7 +385,7 @@ Gold Coins: #DFBC00
 				</td>
 			</tr>
 			</table>
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			<!-- Motor -->
 			<table style="width:100%">
 			<tr>
@@ -363,7 +406,7 @@ Gold Coins: #DFBC00
 			<h1> A/C Contracts ($<span id="ACContractMoney"></span>k/A/C Unit):</h1>
 			<p><span id="ACContract"></span> A/C Unit Contracts | <span id="ACContractAC"></span> A/C Units for $<span id="ACContractMoney"></span> K | Cost: <span id="ACContractCost"></span> A/C Units </p>
 			<input type="button" id="buyACcontract" value="Start 1" /><input type="button" id="breakACcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		</div><!-- /#CoalTab -->
 
 		
@@ -387,7 +430,7 @@ Gold Coins: #DFBC00
 			<h1> Copper Contracts ($<span id="CopperContractMoney"></span>k/10 Copper):</h1>
 			<p><span id="CopperContract"></span> Copper Contracts | <span id="CopperContractCopper"></span> Copper for $<span id="CopperContractMoney"></span> K | Cost: <span id="CopperContractCost"></span> Copper </p>
 			<input type="button" id="buyCoppercontract" value="Start 1" /><input type="button" id="breakCoppercontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<!-- Refined Copper -->
 			<table style="width:100%">
@@ -407,7 +450,7 @@ Gold Coins: #DFBC00
 			<h1> Refined Copper Contracts ($<span id="RefCopperContractMoney"></span>k/10 Refined Copper):</h1>
 			<p><span id="RefCopperContract"></span> Refined Copper Contracts | <span id="RefCopperContractRefCopper"></span> Refined Copper for $<span id="RefCopperContractMoney"></span> K | Cost: <span id="RefCopperContractCost"></span> Refined Copper </p>
 			<input type="button" id="buyrefCoppercontract" value="Start 1" /><input type="button" id="breakRefCoppercontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 
 			<!-- Spooler -->
 			<table style="width:100%">
@@ -429,7 +472,7 @@ Gold Coins: #DFBC00
 			<h1> Spool Contracts ($<span id="SpoolContractMoney"></span>k/10 Spools):</h1>
 			<p><span id="SpoolContract"></span> Spool Contracts | <span id="SpoolContractSpool"></span> Spool for $<span id="SpoolContractMoney"></span> K | Cost: <span id="SpoolContractCost"></span> Spools </p>
 			<input type="button" id="buySpoolcontract" value="Start 1" /><input type="button" id="breakSpoolcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<!-- ElecFact -->
 			<table style="width:100%">
@@ -451,7 +494,7 @@ Gold Coins: #DFBC00
 			<h1> Electronic Contracts ($<span id="ElecContractMoney"></span>k/10 Electronics):</h1>
 			<p><span id="ElecContract"></span> Electronic Contracts | <span id="ElecContractElectronic"></span> Electronic for $<span id="ElecContractMoney"></span> K | Cost: <span id="ElecContractCost"></span> Electronics </p>
 			<input type="button" id="buyEleccontract" value="Start 1" /><input type="button" id="breakEleccontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		</div><!-- /#CopperTab -->
 
 		
@@ -461,7 +504,7 @@ Gold Coins: #DFBC00
 			<h1> Oil Well (10 Oil/Second):</h1>
 			<p><span id="OilMine"></span> Oil Well | Cost: $<span id="OilMineCost"></span> K </p>
 			<input type="button" id="buyOilmine" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			<table style="width:100%">
 			<tr>
 				<td>
@@ -484,7 +527,7 @@ Gold Coins: #DFBC00
 				</td>
 			</tr>
 			</table>
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 		</div><!-- /#OilTab -->
 
@@ -495,7 +538,7 @@ Gold Coins: #DFBC00
 			<h1> Shifter (5 Sand/3MWh per Second):</h1>
 			<p><span id="Shifter"></span> Shifters | Cost: <span id="ShifterMotorCost"></span> Motor + <span id="ShifterMechCost"></span> Mechanical Parts </p>
 			<input type="button" id="buyShifter" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<!-- Glass -->
 			<h1> Glass Furnaces (15 Sand -> 5 Glass/Second):</h1>
@@ -505,7 +548,7 @@ Gold Coins: #DFBC00
 			<h1> Glass Contracts ($<span id="GlassContractMoney"></span>k/10 Glass):</h1>
 			<p><span id="GlassContract"></span> Glass Contracts | <span id="GlassContractGlass"></span> Glass for $<span id="GlassContractMoney"></span> K | Cost: <span id="GlassContractCost"></span> Glass </p>
 			<input type="button" id="buyGlasscontract" value="Start 1" /><input type="button" id="breakGlasscontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<!-- LightbulbFact -->
 			<table style="width:100%">
@@ -527,7 +570,7 @@ Gold Coins: #DFBC00
 			<h1> Lightbulb Contracts ($<span id="LightbulbContractMoney"></span>K/10 Lightbulbs):</h1>
 			<p><span id="LightbulbContract"></span> Lightbulb Contracts | <span id="LightbulbContractLightbulb"></span> Lightbulb for $<span id="LightbulbContractMoney"></span> K | Cost: <span id="LightbulbContractCost"></span> Lightbulbs </p>
 			<input type="button" id="buyLightbulbcontract" value="Start 1" /><input type="button" id="breakLightbulbcontract" value="Break 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		</div><!-- /#GlassTab -->
 
 		
@@ -536,22 +579,22 @@ Gold Coins: #DFBC00
 			<h1> Drill:</h1>
 			<p><span id="Drill"></span> Drills | Cost: <span id="DrillMotorCost"></span> Motor + <span id="DrillMechCost"></span> Mechanical Parts </p>
 			<input type="button" id="builddrill" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Furnace:</h1>
 			<p><span id="Furnace"></span> Furnaces | Cost: <span id="FurnaceCost"></span> Refined Iron</p>
 			<input type="button" id="buildFurnace" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Automated Factory Arm:</h1>
 			<p><span id="Arm"></span> Automated Arms | Cost: <span id="ArmMotorCost"></span> Motor + <span id="ArmMechCost"></span> Mechanical Parts  + <span id="ArmElecCost"></span> Electronics </p> 
 			<input type="button" id="buildarm" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Solar Array:</h1>
 			<p><span id="SolarArray"></span> Solar Array | Cost: <span id="SolarArrayElecCost"></span> Electronics + <span id="SolarArrayGlassCost"></span> Glass </p> 
 			<input type="button" id="buildSolarArray" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		</div><!-- /#WorkshopTab -->
 		
 		
@@ -560,22 +603,22 @@ Gold Coins: #DFBC00
 			<h1 title="These babies stretch for miles!"> Power Lines (Increases the Cost of Power):</h1>
 			<p><span id="PowerLine"></span> Power Lines | Cost: $<span id="PowerLineCost"></span>K</p>
 			<input type="button" id="buyPowerLine" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="Harness the power of carbon!"> Coal Plant (Produces 60 MWh/30 Coal per Second):</h1>
 			<p><span id="CoalPlant"></span> Coal Plants | Cost: 1 Empty Lot + $<span id="CoalPlantCost"></span>K</p>
 			<input type="button" id="buyCoalPlant" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="Renewable Engery!"> Solar Plant (Produces 5 MWh/Second):</h1>
 			<p><span id="SolarPlant"></span> Solar Plant | Cost: 1 Empty Lot + <span id="SolarPlantCost"></span> Solar Arrays </p>
 			<input type="button" id="buildSolarPlant" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="We don't know how it works, but the regulations make it expensive"> Nuclear Plant (Produces 150 MWh/Second):</h1>
 			<p><span id="NuclearPlant"></span> Nuclear Plants | Cost: 1 Empty Lot + $<span id="NuclearPlantCost"></span>K</p>
 			<input type="button" id="buyNuclearPlant" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 		</div><!-- /#PowerTab -->
 		
 		
@@ -584,17 +627,17 @@ Gold Coins: #DFBC00
 			<h1> Land:</h1>
 			<p><span id="Land"></span> Empty Lots | Cost: $<span id="LandCost"></span>K</p>
 			<input type="button" id="buyLand" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="We call it personal for tax reasons, we hire people to build the stuff."> Personal Workshop (Opens Workshop Tab | Reduces Workshop Costs by 15% | 2 MWh/Second):</h1>
 			<p><span id="Workshop"></span> Workshops | Cost: 1 Empty Lot + $<span id="WorkshopCost"></span>K</p>
 			<input type="button" id="buyWorkshop" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="Selling is just politics, and all politicians need an office."> Office (Increases Contract Prices | Warning: Increase Anti-Contract Prices | 2 MWh/Second):</h1>
 			<p><span id="Office"></span> Offices | Cost: 1 Empty Lot + $<span id="OfficeCost"></span>K</p>
 			<input type="button" id="buyOffice" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 
 		
@@ -647,7 +690,7 @@ Gold Coins: #DFBC00
 			<h1> Apartments (Houses 15 Workers | 2 MWh/Second):</h1>
 			<p><span id="Apartment"></span> Apartments | Cost: 1 Empty Lot + $<span id="ApartmentCost"></span>K</p>
 			<input type="button" id="buyApartment" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			
 					<!-- Cons Parts -->
@@ -663,18 +706,18 @@ Gold Coins: #DFBC00
 			<h1 title="Screw Wholesale! Lets get into retail!"> Car Dealership ($<span id="CarDealerMoney"></span>K/10 Cars | 2 MWh/Second):</h1>
 			<p><span id="Dealership"></span> Dealerships | Cost: 1 Empty Lot + $<span id="DealershipCost"></span>K</p>
 			<input type="button" id="buyDealership" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<span id="DealershipStatus2"></span>
 			<h1 title="Might as well use all this rock from the mining."> Road (Increases Dealership Prices):</h1>
 			<p><span id="Road"></span> Roads | Cost: 1 Empty Lot </p>
 			<input type="button" id="buyRoad" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="Should we spend our land on Roads or Solar Plants? Why not both?"> Solar Road (Increases Dealership Prices | Produces 10 MWh/Second):</h1>
 			<p><span id="SolarRoad"></span> Solar Roads | Cost: 1 Empty Lot + <span id="SolarRoadCost"></span> Solar Arrays</p>
 			<input type="button" id="buySolarRoad" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 		
 		</div>
@@ -685,23 +728,23 @@ Gold Coins: #DFBC00
 			<h1 title="Comes with a free TSA team!"> Airport (Provides space for 30 planes | Each Plane makes $<span id="AirportMoney"></span> | 10 MWh/Second):</h1>
 			<p><span id="AirportStatus"></span> </p>
 			<input type="button" id="buyAirport" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<span id="AirportStatus2"></span>
 			<h1 title="Its like a big metal birdhouse for a big metal bird."> Hanger (Houses 5 Planes):</h1>
 			<p><span id="Hanger"></span> Hangers | Cost: 2 Empty Lots + $<span id="HangerCost"></span>K</p>
 			<input type="button" id="buyHanger" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="Faster loading, more money! Plus we can just store a plane at the terminal."> Terminal (Increases Base Plane Ticket | Houses 1 Plane):</h1>
 			<p><span id="Terminal"></span> Terminals | Cost: $<span id="TerminalCost"></span>K</p>
 			<input type="button" id="buyTerminal" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1 title="Is the exit through a gift shop? The exit is ALWAYS through a gift shop."> Gift Shop (Increases Sales from Passengers):</h1>
 			<p><span id="GiftShop"></span> Gift Shops | Cost: $<span id="GiftShopCost"></span>K</p>
 			<input type="button" id="buyGiftShop" value="Build 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 		
 		</div>
@@ -730,27 +773,27 @@ Gold Coins: #DFBC00
 			<h1> Gilded Iron Mines (10 Iron/Second | Persists through retirement):</h1>
 			<p><span id="GildedIronMine"></span> Gilded Iron Mines | Cost: <span id="GildedIronMineCost"></span> Gold Coins </p>
 			<input type="button" id="buyGildedIronMine" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Gilded Coal Mines (6 Coal/Second | Persists through retirement | Requires License to Produce):</h1>
 			<p><span id="GildedCoalMine"></span> Gilded Coal Mines | Cost: <span id="GildedCoalMineCost"></span> Gold Coins </p>
 			<input type="button" id="buyGildedCoalMine" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Gilded Copper Mines (10 Copper/Second | Persists through retirement | Requires License to Produce):</h1>
 			<p><span id="GildedCopperMine"></span> Gilded Copper Mines | Cost: <span id="GildedCopperMineCost"></span> Gold Coins </p>
 			<input type="button" id="buyGildedCopperMine" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Gilded Oil Well (20 Oil/Second | Persists through retirement | Requires License to Produce):</h1>
 			<p><span id="GildedOilWell"></span> Gilded Oil Wells | Cost: <span id="GildedOilWellCost"></span> Gold Coins </p>
 			<input type="button" id="buyGildedOilWell" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			<h1> Gilded License (Licenses persist through retirement):</h1>
 			<p><span id="GildedLicenseStatus"></span> </p>
 			<input type="button" id="buyGildedLicense" value="Buy 1" />
-			<br />================================================================================================================================================================================================================<br />
+			<div class="divider"></div>
 			
 			
 		</div>

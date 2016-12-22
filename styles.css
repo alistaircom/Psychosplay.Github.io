@@ -161,7 +161,8 @@ td {
 }
 
 th {
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 1.75em;
 }
 
 tr.swMain td:nth-child(3), tr.swMain td:nth-child(4)  {
@@ -190,3 +191,41 @@ tr#SandResource td, tr#GlassResource td, tr#LightbulbResource td {
     background-color: #d0dfe2;
 }
 
+/* Dividers */
+
+.divider {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid silver;
+    margin: 1em 0; 
+}
+
+/* Unit Cards */
+
+    table.unitCard {
+        border-collapse: collapse;
+        width: 45%;
+        float: left;
+        margin-right: 2%;
+    }
+        table.unitCard td {
+            position: relative;
+            border: 1px solid #666;
+            padding: .5em;
+        }
+
+        table.unitCard td p {
+            margin: 1em 0 0 0;
+        }
+
+        table.unitCard td p.info {
+            position: absolute;
+            padding: .325em;
+            background: #666;
+            color: white;
+            font-size: .625em;
+            font-weight: 700;
+            top:0;
+            left:0;
+            margin: 0;
+        }
