@@ -14,79 +14,146 @@ Gold Coins: #DFBC00
 -->
   <div class="HolyGrail-body">
     <nav class="HolyGrail-nav">
-		<caption><h1> Resources:</h1></caption>
+		<caption><h1>Resources:</h1></caption>
 
 		<p>$<span id="Money"></span> K | $<span id="MoneyPS"></span> K/Second</p>
-		<p> Power: <span id="MWh"></span> Mega-Watt Hours at $<span id="MWhCost"></span>K |	$<span id="MWhMoney"></span>K/Second </p>
+		<p> Power: <span id="MWh"></span> Mega-Watt Hours at $<span id="MWhCost"></span>K |	$<span id="MWhMoney"></span>K/Second</p>
 		<div id="GoldCoinResource" class="swHide"><p><span id="GoldCoin"></span> Gold Coins</p></div>
 
+
 		<!-- IRON Resource -->
-		<div id="IronResource" class="swHide">
-			<p><span id="Iron"></span> Iron | <span id="IronPS"></span>/s | <span id="IronAntiContract"></span> AC</p>
-		</div>
-		<div id="RefIronResource" class="swHide">
-			<p><span id="RefIron"></span> Refined Iron | <span id="RefIronPS"></span>/s | <span id="RefIronAntiContract"></span> AC</p>
-		</div>
-		<div id="MotorResource" class="swHide">
-			<p><span id="Motor"></span> Motors | <span id="MotorPS"></span>/s | <span id="MotorAntiContract"></span> AC</p>
-		</div>
-		<div id="CarResource" class="swHide">
-			<p><span id="Car"></span> Cars | <span id="CarPS"></span>/s | <span id="CarAntiContract"></span> AC</p>
-		</div>
-		<div id="PlaneResource" class="swHide">
-			<p><span id="Plane"></span>/<span id="PlaneLimit"></span> Planes | <span id="PlanePS"></span> Planes in <span id="ThirtySecondCounter"></span> Seconds</p>
-		</div>
-		
-		<!-- COAL Resource -->
-		<div id="CoalResource" class="swHide">
-			<p><span id="Coal"></span> Coal | <span id="CoalPS"></span>/s | <span id="CoalAntiContract"></span> AC</p>
-		</div>
-		<div id="SteelResource" class="swHide">
-			<p><span id="Steel"></span> Steel | <span id="SteelPS"></span>/s | <span id="SteelAntiContract"></span> AC</p>
-		</div>
-		<div id="MechPartResource" class="swHide">
-			<p><span id="MechPart"></span> Mechanical Parts | <span id="MechPartPS"></span>/s | <span id="MechPartAntiContract"></span> AC</p>
-		</div>
-		<div id="ACResource" class="swHide">
-			<p><span id="AC"></span> A/C Unit | <span id="ACPS"></span>/s | <span id="ACAntiContract"></span> AC</p>
-		</div>
+		<table cellspacing="0">
+		<thead>
+			<tr>
+				<th>Resource</th>
+				<th>&#127981;</th>
+				<th>&#9203;</th>
+				<th>&#128221;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="IronResource" class="swHide">
+				<td width="40%">Iron</td>
+				<td width="25%"><span id="Iron"></span></td>
+				<td width="20%"><span id="IronPS"></span>/s</td>
+				<td width="15%"><span id="IronAntiContract"></span></td>
+			</tr>
+			<tr id="RefIronResource" class="swHide">
+				<td>Refined Iron</td>
+				<td><span id="RefIron"></span></td>
+				<td><span id="RefIronPS"></span>/s</td>
+				<td><span id="RefIronAntiContract"></span></td>
+			</tr>
+			<tr id="MotorResource" class="swHide">
+				<td>Motors</td>
+				<td><span id="Motor"></span></td>
+				<td><span id="MotorPS"></span>/s</td>
+				<td><span id="MotorAntiContract"></span></td>
+			</tr>
+			<tr id="CarResource" class="swHide">
+				<td>Cars</td>
+				<td><span id="Car"></span></td>
+				<td><span id="CarPS"></span>/s</td>
+				<td><span id="CarAntiContract"></span></td>
+			</tr>
+			<tr id="PlaneResource" class="swHide">
+				<td>Planes</td>
+				<td><span id="Plane"></span>/<span id="PlaneLimit"></span></td>
+				<td colspan="2"><span id="PlanePS"></span> New planes in <span id="ThirtySecondCounter"></span> Seconds</p></td>
+			</tr>
+			<tr id="CoalResource" class="swHide">
+				<td>Coal</td>
+				<td><span id="Coal"></span></td>
+				<td><span id="CoalPS"></span>/s</td>
+				<td><span id="CoalAntiContract"></span></td>
+			</tr>
+			<tr id="SteelResource" class="swHide">
+				<td>Steel</td>
+				<td><span id="Steel"></span></td>
+				<td><span id="SteelPS"></span>/s</td>
+				<td><span id="SteelAntiContract"></span></td>
+			</tr>
+			<tr id="MechPartResource" class="swHide">
+				<td>Mechanical Parts</td>
+				<td><span id="MechPart"></span></td>
+				<td><span id="MechPartPS"></span>/s</td>
+				<td><span id="MechPartAntiContract"></span></td>
+			</tr>
+			<tr id="ACResource" class="swHide">
+				<td>Air Conditioners</td>
+				<td><span id="AC"></span></td>
+				<td><span id="ACPS"></span>/s</td>
+				<td><span id="ACAntiContract"></span></td>
+			</tr>
 
-		<!-- COPPER Resource -->
-		<div id="CopperResource" class="swHide">
-			<p><span id="Copper"></span> Copper | <span id="CopperPS"></span>/s | <span id="CopperAntiContract"></span> AC</p>
-		</div>
-		<div id="RefCopperResource" class="swHide">
-			<p><span id="RefCopper"></span> Refined Copper | <span id="RefCopperPS"></span>/s | <span id="RefCopperAntiContract"></span> AC</p>
-		</div>
-		<div id="SpoolResource" class="swHide">
-			<p><span id="Spool"></span> Spools | <span id="SpoolPS"></span>/s | <span id="SpoolAntiContract"></span> AC</p>
-		</div>
-		<div id="ElectronicResource" class="swHide">
-			<p><span id="Electronic"></span> Electronics | <span id="ElectronicPS"></span>/s | <span id="ElecAntiContract"></span> AC</p>
-		</div>
 
-		<!-- OIL Resource -->
-		<div id="OilResource" class="swHide">
-			<p><span id="Oil"></span> Oil | <span id="OilPS"></span>/s | <span id="OilAntiContract"></span> AC</p>
-		</div>
-		<div id="GasResource" class="swHide">
-			<p><span id="Gas"></span> Gas | <span id="GasPS"></span>/s | <span id="GasAntiContract"></span> AC</p>
-		</div>
-		<div id="PlasticResource" class="swHide">
-			<p><span id="Plastic"></span> Plastic | <span id="PlasticPS"></span>/s | <span id="PlasticAntiContract"></span> AC</p>
-		</div>
+			<tr id="CopperResource" class="swHide">
+				<td>Copper</td>
+				<td><span id="Copper"></span></td>
+				<td><span id="CopperPS"></span>/s</td>
+				<td><span id="CopperAntiContract"></span></td>
+			</tr>
+			<tr id="RefCopperResource" class="swHide">
+				<td>Refined Copper</td>
+				<td><span id="RefCopper"></span></td>
+				<td><span id="RefCopperPS"></span>/s</td>
+				<td><span id="RefCopperAntiContract"></span></td>
+			</tr>
+			<tr id="SpoolResource" class="swHide">
+				<td>Spool</td>
+				<td><span id="Spool"></span></td>
+				<td><span id="SpoolPS"></span>/s</td>
+				<td><span id="SpoolAntiContract"></span></td>
+			</tr>
+			<tr id="ElectronicResource" class="swHide">
+				<td>Electronics</td>
+				<td><span id="Electronic"></span></td>
+				<td><span id="ElectronicPS"></span>/s</td>
+				<td><span id="ElecAntiContract"></span></td>
+			</tr>
 
-		<!-- SAND Resource -->
-		<div id="SandResource" class="swHide">
-			<p><span id="Sand"></span> Sand | <span id="SandPS"></span>/s | <span id="SandAntiContract"></span> AC</p>
-		</div>
-		<div id="GlassResource" class="swHide">
-			<p><span id="Glass"></span> Glass | <span id="GlassPS"></span>/s | <span id="GlassAntiContract"></span> AC</p>
-		</div>
-		<div id="LightbulbResource" class="swHide">
-			<p><span id="Lightbulb"></span> Lightbulb | <span id="LightbulbPS"></span>/s | <span id="LightbulbAntiContract"></span> AC</p>
-		</div>
-		
+			<tr id="OilResource" class="swHide">
+				<td>Oil</td>
+				<td><span id="Oil"></span></td>
+				<td><span id="OilPS"></span>/s</td>
+				<td><span id="OilAntiContract"></span></td>
+			</tr>
+			<tr id="GasResource" class="swHide">
+				<td>Gas</td>
+				<td><span id="Gas"></span></td>
+				<td><span id="GasPS"></span>/s</td>
+				<td><span id="GasAntiContract"></span></td>
+			</tr>
+			<tr id="PlasticResource" class="swHide">
+				<td>Spool</td>
+				<td><span id="Plastic"></span></td>
+				<td><span id="PlasticPS"></span>/s</td>
+				<td><span id="PlasticAntiContract"></span></td>
+			</tr>
+
+			<tr id="SandResource" class="swHide">
+				<td>Sand</td>
+				<td><span id="Sand"></span></td>
+				<td><span id="SandPS"></span>/s</td>
+				<td><span id="SandAntiContract"></span></td>
+			</tr>
+			<tr id="GlassResource" class="swHide">
+				<td>Glass</td>
+				<td><span id="Glass"></span></td>
+				<td><span id="GlassPS"></span>/s</td>
+				<td><span id="GlassAntiContract"></span></td>
+			</tr>
+			<tr id="LightbulbResource" class="swHide">
+				<td>Lightbulb</td>
+				<td><span id="Lightbulb"></span></td>
+				<td><span id="LightbulbPS"></span>/s</td>
+				<td><span id="LightbulbAntiContract"></span></td>
+			</tr>
+
+		</tbody>
+		</table>
+
+
 		<!-- also add in an empty status text area -->
 		
 		<h3><span id="tillautosave"> </span> seconds until autosave</h3>
